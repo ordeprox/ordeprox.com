@@ -79,12 +79,17 @@
         font-size: 24px;
         color: #333;
         margin-bottom: 10px;
-        animation: bounce 1s infinite;
+        transition: transform 0.3s ease;
     }
-    @keyframes bounce {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
-        100% { transform: translateY(0); }
+    .card:hover i {
+        animation: dance 0.5s infinite alternate;
+    }
+    @keyframes dance {
+        0% { transform: translateY(0) rotate(0deg); }
+        25% { transform: translateY(-3px) rotate(-5deg); }
+        50% { transform: translateY(-5px) rotate(0deg); }
+        75% { transform: translateY(-3px) rotate(5deg); }
+        100% { transform: translateY(0) rotate(0deg); }
     }
     .card h3 {
         font-size: 16px;
@@ -148,7 +153,7 @@
     </div>
 </main>
 <footer>
-    <p style="font-size: 8px; margin: 0;">© 2024 OrdeProx Company. Todos los derechos reservados.</p>
+    <p style="font-size: 9px; margin: 0;">© 2024 OrdeProx Company. Todos los derechos reservados.</p>
 </footer>
 <audio id="pinSound">
     <source src="https://ordeprox.com/audio/pin.mp3" type="audio/mpeg">
